@@ -3,7 +3,7 @@
 		<img class="w-52 border-slate-200" :src="book?.src" alt="">
 		<div class="book-information p-4">
 			<h2 class="text-4xl font-medium">{{ book?.title }}</h2>
-			<p class="text-2xl text-secondary mb-4">By {{ book?.author }}</p>
+			<p class="text-xl text-secondary mb-4">By {{ book?.author }}</p>
 
 			<p class="w-8/12">{{ book?.description }}</p>
 		</div>

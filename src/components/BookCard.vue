@@ -11,7 +11,8 @@
 				<p class="text-sm text-secondary">By {{ book.author }}</p>
 			</div>
 
-			<Badge :text="loanStatusInformation.text" :status="loanStatusInformation.status"/>
+			<!-- Improve loan functionality, then add this badge -->
+			<!-- <Badge :text="loanStatusInformation.text" :status="loanStatusInformation.status"/> -->
 		</div>
 	</div>
 </template>

@@ -1,6 +1,6 @@
 <template>
 	<div class="home-wrapper p-4">
-		<h4 class="text-2xl mb-4">Your loans</h4>
+		<h4 class="text-2xl mb-4">Available books to loan</h4>
 		<LoanList :loans="loansStore.loans"/>
 	</div>
 </template>
