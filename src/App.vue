@@ -1,27 +1,41 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import ArrowDownLeft from './icons/ArrowDownLeft.vue';
+import Header from './components/Header.vue';
+import Menu from './components/Menu.vue';
 </script>
 
 <template>
   <div class="content-wrapper h-screen w-screen">
 
-    <header class="full-size border-b-2">
-      <!-- <ArrowDownLeft></ArrowDownLeft> -->
-    </header>
+
+    <Header class="full-size border-b-2" style="grid-area: header;" />
 
     <main class="">
       <RouterView />
     </main>
 
-    
-    <aside class="bg-primary">
+    <Menu style="grid-area: aside;" />
 
-    </aside>
     
   </div>
   <!-- <footer><h1>Footer</h1></footer> -->
 </template>
+
+<script lang="ts">
+  export default {
+		data(){
+			return {
+				
+			}
+		},
+
+		components: {
+			Header,
+      Menu
+		}
+	}
+</script>
 
 <style lang="scss" scoped>
   .content-wrapper{

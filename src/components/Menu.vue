@@ -1,15 +1,11 @@
 <template>
-	<button @click="count++">{{ count }}</button>
+	<aside class="bg-primary size-full"></aside>
 </template>
 
 <script lang="ts">
 	export default {
 		data(){
-			return {
-				count: 0
-			}
+			return {}
 		}
-
-
 	}
 </script>
