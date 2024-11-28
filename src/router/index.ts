@@ -1,5 +1,6 @@
 import Book from '@/views/Book.vue'
 import Home from '@/views/Home.vue'
+import Search from '@/views/Search.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/book/:id',
       name: 'book',
       component: Book,
+    },
+    {
+      path: '/search/:query',
+      name: 'search',
+      component: Search,
     },
   ],
 })

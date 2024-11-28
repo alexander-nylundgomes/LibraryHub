@@ -11,13 +11,15 @@ export const useBookStore = defineStore('book', {
 	getters: {
 		getBook: (state) => {
 			return (bookId: number): Book | undefined => state.books.find(book => book.id === bookId); 
+		},
+		searchBooks: (state) => {
+			return (query: string): Book[] => state.books.filter(book => book.title.toLowerCase().includes(query)); 
 		}
 	},
 	actions: {
 		async fetchBooks() {
 			try {
 				this.books = (await axios.get('/example-data/books/books.json')).data
-				console.log(this.books)
 			} catch (error) {
 				return error;
 			}

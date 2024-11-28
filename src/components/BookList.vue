@@ -1,7 +1,6 @@
 <template>
 	<div class="book-list-wrapper flex gap-4">
-		<BookCard :book="books[0]" />
-		<BookCard :book="books[1]"/>
+		<BookCard v-for="book in books" :book="book" :key="book.id" />
 	</div>
 </template>
 
