@@ -3,7 +3,8 @@
 		"book": {
 			"title": "Crime and Punishment",
 			"author": "Fyodor Dostoevsky",
-			"src": "/images/covers/crime-and-punishment.jpeg"
+			"src": "/images/covers/crime-and-punishment.jpeg",
+			"id": 1
 		},
 		"expirationDate": 1733251864472
 	},
@@ -11,7 +12,8 @@
 		"book": {
 			"title": "White Nights",
 			"author": "Fyodor Dostoevsky",
-			"src": "/images/covers/white-nights.jpg"
+			"src": "/images/covers/white-nights.jpg",
+			"id": 2
 		},
 		"expirationDate": 1733251864472
 	}

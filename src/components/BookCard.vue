@@ -1,13 +1,13 @@
 <template>
-	<div class="card w-64 rounded p-3 shadow-md border">
+	<div class="card w-72 rounded p-3 shadow-md border hover:shadow-sm hover:border-blue-500 transition cursor-pointer" @click="goToBook()">
 		
 		<div class="cover w-full aspect-square flex align-center justify-center p-2 bg-slate-100">
-			<img class="w-100 h-100 border-1 border-slate-200 shadow-md" :src="book.src" alt="">
+			<img class="w-100 h-100 border border-slate-200 shadow-md" :src="book.src" alt="">
 		</div>
 		
 		<div class="lower-section flex justify-between items-center mt-3">
-			<div class="author ">
-				<h1 class="text-1xl">{{ book.title }}</h1>
+			<div class="author">
+				<h1 class="text-xl">{{ book.title }}</h1>
 				<p class="text-sm text-secondary">By {{ book.author }}</p>
 			</div>
 
@@ -19,6 +19,7 @@
 <script lang="ts">
 import { PillStatus } from '@/enums/pill-status';
 import Badge from './Badge.vue';
+import router from '@/router';
 
 	export default {
 		props: ["book", "loanExpiration"],
@@ -30,7 +31,9 @@ import Badge from './Badge.vue';
 		},
 
 		methods: {
-			
+			goToBook(){
+				router.push({ name: 'book', params: { id: this.book.id } })
+			}
 		},
 
 		mounted(){

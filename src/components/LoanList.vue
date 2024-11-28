@@ -1,5 +1,5 @@
 <template>
-	<div class="loan-list-wrapper p-4 flex gap-4">
+	<div class="loan-list-wrapper flex gap-4">
 		<BookCard 
 			v-for="(loan, index) in loans" 
 			:key="index"

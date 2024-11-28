@@ -1,3 +1,4 @@
+import Book from '@/views/Book.vue'
 import Home from '@/views/Home.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -8,7 +9,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home,
-    }
+    },
+    {
+      path: '/book/:id',
+      name: 'book',
+      component: Book,
+    },
   ],
 })
 

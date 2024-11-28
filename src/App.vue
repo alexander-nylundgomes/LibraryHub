@@ -3,6 +3,10 @@ import { RouterLink, RouterView } from 'vue-router'
 import ArrowDownLeft from './icons/ArrowDownLeft.vue';
 import Header from './components/Header.vue';
 import Menu from './components/Menu.vue';
+import { mapStores } from 'pinia';
+import { useLoanStore } from './store/loans';
+import { useUserStore } from './store/users';
+import { useBookStore } from './store/books';
 </script>
 
 <template>
@@ -28,6 +32,16 @@ import Menu from './components/Menu.vue';
 			return {
 				
 			}
+		},
+
+    computed: {
+			...mapStores(useLoanStore, useUserStore, useBookStore)
+		},
+
+		beforeMount(){
+			this.loansStore.fetchLoans();
+			this.usersStore.fetchActiveUser();
+			this.bookStore.fetchBooks();
 		},
 
 		components: {
